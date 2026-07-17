@@ -1,29 +1,21 @@
 from students import students
-from utils.helpers import (
-    highest_score,
-    lowest_score,
-    average_score,
-)
+from utils.helpers import highest_score, lowest_score
 
 
-def display_students():
-    print("=" * 35)
-    print("      STUDENT REPORT")
-    print("=" * 35)
+def main():
+    print("Student Scores")
+    print("-" * 20)
 
     for student in students:
-        print(f"{student['name']:<12} {student['score']}")
+        print(f"{student['name']}: {student['score']}")
 
     highest = highest_score(students)
     lowest = lowest_score(students)
-    average = average_score(students)
 
-    print("\nStatistics")
-    print("-" * 35)
-    print(f"Highest Score : {highest['name']} ({highest['score']})")
-    print(f"Lowest Score  : {lowest['name']} ({lowest['score']})")
-    print(f"Average Score : {average:.2f}")
+    print("\nSummary")
+    print(f"Highest Score: {highest['name']} ({highest['score']})")
+    print(f"Lowest Score: {lowest['name']} ({lowest['score']})")
 
 
 if __name__ == "__main__":
-    display_students()
+    main()
