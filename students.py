@@ -1,11 +1,12 @@
 """
 Stores student records.
 """
+from models import Student
 
 students = [
-    {"name": "Alice", "score": 85},
-    {"name": "Bob", "score": 72},
-    {"name": "Charlie", "score": 91},
-    {"name": "David", "score": 66},
-    {"name": "Esther", "score": 78},
+    Student(name="Alice", score=85),
+    Student(name="Bob", score=72),
+    Student(name="Charlie", score=91),
+    Student(name="David", score=66),
+    Student(name="Esther", score=78),
 ]
